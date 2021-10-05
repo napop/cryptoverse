@@ -10,6 +10,27 @@ const App = () => {
         <Navbar />
       </div>
       <div className="main"></div>
+      <Layout>
+        <div className="routes">
+          <Switch>
+            <Route exact path="/">
+              <Homepage />
+            </Route>
+            <Route exact path="/exchanges">
+              <Exchange />
+            </Route>
+            <Route exact path="/cryptocurrencies">
+              <Cyptocurrencies />
+            </Route>
+            <Route exact path="/crypto/:coinId">
+              <CryptoDetails />
+            </Route>
+            <Route exact path="/news">
+              <News />
+            </Route>
+          </Switch>
+        </div>
+      </Layout>
       <div className="footer"></div>
     </div>
   );
